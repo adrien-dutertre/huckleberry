@@ -1,3 +1,31 @@
+:root {
+  /* Espacements */
+  --espace-s: 8px;
+  --espace-m: 16px;
+  --espace-l: 24px;
+  --espace-xl: 32px;
+  --espace-2xl: 48px;
+  --espace-3xl: 64px;
+  --espace-4xl: 96px;
+
+  /* Taille de police*/
+  --police-m: 1rem;
+  --police-l: 1.25rem;
+  --police-xl: 1.5rem;
+  --police-2xl: 2rem;
+
+  /* Couleurs */
+  --couleur-primaire: hsl(160deg, 100%, 30%);
+  --couleur-secondaire-claire: hsl(45deg, 100%, 50%);
+  --couleur-secondaire-sombre: hsl(45deg, 100%, 40%);
+  --couleur-gris-0: hsl(0deg, 0%, 0%);
+  --couleur-gris-10: hsl(0deg, 0%, 10%);
+  --couleur-gris-30: hsl(0deg, 0%, 30%);
+  --couleur-gris-40: hsl(0deg, 0%, 40%);
+  --couleur-gris-60: hsl(0deg, 0%, 60%);
+  --couleur-gris-100: hsl(0deg, 0%, 100%);
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -10,3 +38,64 @@ body {
 }
 
 /* Add styles here! */
+.max-width-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  border-bottom: var(--espace-s) solid var(--couleur-gris-60);
+  padding-top: var(--espace-3xl);
+  padding-bottom: var(--espace-2xl);
+}
+
+p {
+  font-size: var(--police-l);
+  margin: 0;
+}
+
+p:first-of-type {
+  margin-bottom: var(--espace-m);
+}
+
+.intro-chunk p {
+  max-width: 415px;
+}
+
+.title {
+  font-size: var(--police-2xl);
+  margin-top: var(--espace-s);
+  margin-bottom: var(--espace-2xl);
+}
+
+strong {
+  color: var(--couleur-primaire);
+}
+
+main {
+  background-color: var(--couleur-gris-40);
+  padding-top: var(--espace-3xl);
+  padding-bottom: var(--espace-3xl);
+}
+
+
+.card, .intro-chunk {
+  background-color: var(--couleur-gris-100);
+  padding: var(--espace-l);
+}
+
+.card {
+  border-bottom: var(--espace-s) solid var(--couleur-gris-60);
+}
+
+.indented-heading {
+  width: fit-content;
+  font-size: var(--police-xl);
+  background-color: var(--couleur-secondaire-claire);
+  padding: var(--espace-m) var(--espace-xl);
+  border-bottom: var(--espace-s) solid var(--couleur-secondaire-sombre);
+  margin-left: calc(-1 * var(--espace-xl));
+  margin-top: calc(-1 * var(--espace-m));
+  margin-bottom: var(--espace-l)
+}
